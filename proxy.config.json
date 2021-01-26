@@ -1,0 +1,7 @@
+{
+    "/api/*":{
+        "target":"https://commons.wikimedia.org/w/",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

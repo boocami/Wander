@@ -1,0 +1,82 @@
+<div style="background-image:url('../../../assets/Valparaiso-sernatur-DST141.jpg');background-size: cover;">
+  <app-nav></app-nav>
+  <div class="flex contenedor-signup">
+    <div class="screend-midle">
+      <div class="content-signup" style="background-color: rgb(96, 157, 159, 0.3); ">
+        <div class="container-title">
+          <h1 class="title">Create Account</h1>
+        </div>
+        <div class="container-form">
+          <div class="flex space-between tipo-form">
+            <button mat-raised-button class="sign up">Sign up</button>
+            <button mat-raised-button class="sign in">Sign in</button>
+          </div>
+          <div class="flex column container-matForm">
+            <mat-form-field class="example-full-width" style="margin-bottom: 49px;">
+              <mat-label>Full Name</mat-label>
+              <input type="text" matInput placeholder="Jane Doe">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" style="margin-bottom: 49px;">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                placeholder="Ex. pat@example.com">
+              <mat-hint>Errors appear instantly!</mat-hint>
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" style="margin-bottom: 49px;">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="Jane Doe">
+            </mat-form-field>
+            <div class="flex space-between">
+              <div></div>
+              <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon"
+                style="float:right; margin-bottom: 30px; margin-right: 10px;">
+                <mat-icon>navigate_next</mat-icon>
+              </button>
+            </div>
+
+          </div>
+          <div>
+            <h3 class="flex center text-white" style="margin-bottom: 12px;">
+              Sign up With
+            </h3>
+          </div>
+          <div class="flex center social-container">
+            <a href="#" class="social" style="margin-right: 26px;"><img src="../../../assets/facebook.png"></a>
+            <a href="#" class="social" style="margin-right: 26px;"><img src="../../../assets/instagram.png"></a>
+            <a href="#" class="social"><img src="../../../assets/linkedin.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex column center" style="height: 100vh; width: 50%; margin: 50px 100px">
+      <div class="flex column center" style="flex-grow: 1;">
+        <h1>Valparaiso</h1>
+        <p>Valparaíso es una ciudad portuaria de la costa de Chile. Es conocida por sus empinados funiculares y las
+          coloridas casas sobre los cerros. La Sebastiana, la extravagante residencia antigua del poeta chileno Pablo
+          Neruda, es actualmente un museo con amplias vistas del Pacífico. </p>
+      </div>
+      <div class="flex space-between" style="margin-top: 50%;">
+        <div class="flex column">
+          <p class="text-white">Area</p>
+          <p class="text-white">401.6 km2 (155.1 sq mi)</p>
+        </div>
+        <div class="flex column">
+          <p class="text-white">Poblation</p>
+          <p class="text-white">284,630</p>
+        </div>
+        <div class="flex column">
+          <p class="text-white">Coordinates (city)</p>
+          <p class="text-white">33°03′S 71°37′W</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<canvas id="canvas" width="300" height="227" #canvas (click)="getPixeles($event)" style="display: none;"></canvas>

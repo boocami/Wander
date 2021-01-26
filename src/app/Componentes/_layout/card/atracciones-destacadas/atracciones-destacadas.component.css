@@ -1,0 +1,17 @@
+.example-card {
+    max-width: 200px;
+  }
+    .mat-card-header {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.mat-card-header .mat-card-title {
+  margin-bottom: 12px;
+  text-align: center;
+  width: 60px;
+  height: 30px;
+  background-color: #FEF2DE;
+  color: #F9CB7E;
+  padding: 4px;
+  border-radius: 16px;
+}

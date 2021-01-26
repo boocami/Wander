@@ -1,0 +1,49 @@
+<header class="site-header inicio" style="background-image: url('{{url}}');">
+    <div class="contenedor contenido-header center">
+        <p> - Gracias a sus laberínticos cerros, sus pasajes misteriosos y su centro histórico que fue reconocido como
+            Patrimonio de la Humanidad por la UNESCO en 2003</p>
+        <h1 #titulo>{{comuna}}</h1>
+        <p class="tiempo">{{temperatura}} °C {{descriptionTemperatura}} </p>
+    </div> <!-- contenedor -->
+    <div class="box-header">
+        <div class="box-busqueda flex space-between row">
+            <div class="flex space-between box-b" style="margin-top: 20px; width: 100%;">
+                <div class="flex column busqueda">
+                    <p class="texto" #texto style="text-decoration-color:{{colorPrimario}}">Location</p>
+                    <mat-form-field class="example-full-width">
+                        <input type="text" matInput placeholder="Enter your destination">
+                        <mat-icon matSuffix>room</mat-icon>
+                    </mat-form-field>                    
+                </div>
+                <div class="flex column busqueda">
+                    <p class="texto" #texto1 style="text-decoration-color:{{colorPrimario}}">Activity</p>
+                    <mat-form-field>
+                        <mat-label>Favorite Activity</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="flex column busqueda">
+                    <p class="texto" #texto2 style="text-decoration-color:{{colorPrimario}}">Date</p>
+                    <mat-form-field>
+                        <mat-label>Set Day</mat-label>
+                      <!-- #docregion toggle -->
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      <!-- #enddocregion toggle -->
+                    </mat-form-field>                
+                </div>
+                <div class="flex column busqueda botonBusqueda">
+                    <button mat-raised-button class="iconbusqueda">
+                        <mat-icon matSuffix>search</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<canvas id="canvas" width="300" height="227" #canvas (click)="getPixeles($event)" style="display: none;"></canvas>

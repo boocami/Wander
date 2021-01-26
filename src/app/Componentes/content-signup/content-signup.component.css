@@ -1,0 +1,71 @@
+.contenedor-signup{
+   margin-top: 50px;
+}
+
+.content-signup{
+    width: 505px; height: 885px; border:solid white 1px; margin: 100px 100px;
+    overflow: hidden;
+}
+
+.container-title{
+    border-bottom: solid white 1px;
+}
+
+.title{
+    font-size: 40px;text-align: center; padding: 40px 100px; color: white; font-weight: 700;margin: 0 0 0px;
+}
+
+.container-form{
+    margin-top: 49px;
+}
+
+.tipo-form{
+    margin-bottom: 48px;
+}
+
+.sign{
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: 1px solid;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container-matForm{
+    margin-bottom: 30px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  ::ng-deep .mat-form-field .mat-input-element {
+    color: white;
+}
+::ng-deep .mat-form-field .mat-form-field-label {
+    color: white!important;
+}
+::ng-deep .mat-form-field .mat-form-field-underline {
+    background-color: white;
+}
+::ng-deep .mat-form-field .mat-form-field-ripple {
+    background-color: white;
+}
+::ng-deep .mat-form-field .mat-form-field-required-marker {
+    color: white;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color:black;
+}
+.mat-icon{
+    font-size: 50px;
+    color: white;
+}
+

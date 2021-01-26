@@ -1,0 +1,9 @@
+<section class="flex column">
+    <h1>Actividades Sugeridas</h1>
+    <p style="color: #848D9F; font-size: 21px;">Las mejores actividades las encuentras aqui! Planifica tu viaje y diviertete</p>
+    <div class="flex row space-between" style="margin-top: 71px;">
+        <div *ngFor="let hero of heroes" >
+            <app-atracciones-destacadas></app-atracciones-destacadas>
+        </div>
+    </div>
+</section>
